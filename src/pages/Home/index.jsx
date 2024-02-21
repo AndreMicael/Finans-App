@@ -1,8 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import Entradas from '../Entradas';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <Link to="/entradas">Entradas</Link>
+    <Link to="/saidas">Saídas</Link>
+    </>
+
+    
   )
 }
 
