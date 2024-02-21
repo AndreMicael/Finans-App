@@ -1,20 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Entrada from './pages/Entradas';
 import Saidas from './pages/Saidas';
+import Transacoes from './pages/Transacoes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
    <BrowserRouter>
-   <App />
+   
       <Routes>        
           <Route exact path='/' element={<Home />} />
+          <Route path='/transacoes' element={<Transacoes/>}/>
           <Route path="/entradas" element={<Entrada />} />
           <Route path="/saidas" element={<Saidas />} />   
            </Routes>
