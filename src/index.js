@@ -8,13 +8,18 @@ import Home from './pages/Home';
 import Entrada from './pages/Entradas';
 import Saidas from './pages/Saidas';
 import Transacoes from './pages/Transacoes';
+import Login from './pages/Login';
+import Navbar from './Components/Navbar';
+import Cadastrar from './pages/Cadastrar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <BrowserRouter>
-   
-      <Routes>        
+   <BrowserRouter>  
+   <Navbar/> 
+      <Routes>     
+         <Route exact path='/login' element={<Login />} />      
+         <Route exact path='/cadastrar' element={<Cadastrar />} />   
           <Route exact path='/' element={<Home />} />
           <Route path='/transacoes' element={<Transacoes/>}/>
           <Route path="/entradas" element={<Entrada />} />
