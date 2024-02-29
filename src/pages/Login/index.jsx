@@ -1,15 +1,24 @@
 import { useState } from "react";
-import "./Login.module.css";
+import style from "./Login.module.css";
 
 
 const Login = () => {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+   console.log("Funfou")
+ 
+  }
+
+
   return (
-    <div>
+    <div className={style.login}>
         <h1>Fazer Login</h1>
         <p>Preencha os dados corretamente para acessar a sua conta.</p>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>
           <span>E-mail:</span>
           <input 
@@ -31,6 +40,7 @@ const Login = () => {
           value={password}
           onChange={(e)=> setPassword(e.target.value)}/>
           </label>
+          <button className='btn'>Entrar</button>
         </form>
     </div>
   )
