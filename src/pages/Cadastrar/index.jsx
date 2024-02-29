@@ -10,15 +10,16 @@ const Cadastrar = () => {
   const [error,setError] = useState('');
 
   
-  const handleSubmit = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
+    console.log("funfou registro");
   }
 
   return (
     <div className={styles.register}>
-        <h1>Cadastre-se</h1>
+        <h1>Cadastro</h1>
       <p>Você está a um passo do controle financeiro</p>
-      <form className='container' onSubmit={handleSubmit}>
+      <form className='container' onSubmit={handleRegister}>
         <label>
           <span>Nome:</span>
           <input 

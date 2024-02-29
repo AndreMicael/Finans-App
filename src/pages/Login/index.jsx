@@ -16,7 +16,7 @@ const Login = () => {
 
   return (
     <div className={style.login}>
-        <h1>Fazer Login</h1>
+        <h1>Login</h1>
         <p>Preencha os dados corretamente para acessar a sua conta.</p>
         <form onSubmit={handleSubmit}>
           <label>
