@@ -6,10 +6,10 @@ const Login = () => {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-   console.log("Funfou")
+   console.log("Funfou login")
  
   }
 
@@ -18,7 +18,7 @@ const Login = () => {
     <div className={style.login}>
         <h1>Login</h1>
         <p>Preencha os dados corretamente para acessar a sua conta.</p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLogin}>
           <label>
           <span>E-mail:</span>
           <input 
